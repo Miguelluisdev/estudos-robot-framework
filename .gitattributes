@@ -1,2 +1,7 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Ignorar a pasta da venv
+venv/
+
+# Ignorar outros arquivos que não devem ir para o repositório
+*.pyc
+__pycache__/
+.DS_Store
