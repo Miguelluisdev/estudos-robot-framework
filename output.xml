@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-07-30T17:18:10.409490" rpa="false" schemaversion="5">
-<suite id="s1" name="Testes" source="C:\Users\migue\OneDrive\Documentos\estudo-cypress\robot-framework\estudos-robot-framework\testes.robot">
-<test id="s1-t1" name="Verificar diretório atual" line="5">
-<kw name="Run" owner="OperatingSystem">
-<msg time="2025-07-30T17:18:10.528496" level="INFO">Running command 'pwd 2&gt;&amp;1'.</msg>
-<msg time="2025-07-30T17:18:10.547183" level="INFO">${output} = 'pwd' nÆo ‚ reconhecido como um comando interno
-ou externo, um programa oper vel ou um arquivo em lotes.</msg>
-<var>${output}</var>
-<arg>pwd</arg>
-<doc>Runs the given command in the system and returns the output.</doc>
-<status status="PASS" start="2025-07-30T17:18:10.518440" elapsed="0.028743"/>
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-07-30T17:45:13.098515" rpa="false" schemaversion="5">
+<suite id="s1" name="Swaglabs" source="C:\Users\migue\OneDrive\Documentos\estudo-cypress\robot-framework\estudos-robot-framework\swaglabs.robot">
+<test id="s1-t1" name="Cenario: 01 Login com sucesso" line="27">
+<kw name="Enrtrar no site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-30T17:45:13.330180" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-30T17:45:13.330180" elapsed="6.978871"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.309051" elapsed="0.280827"/>
+</kw>
+<status status="PASS" start="2025-07-30T17:45:13.330180" elapsed="7.260707"/>
+</kw>
+<kw name="Preencher os campos de texto">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-30T17:45:20.592531" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.591894" elapsed="0.097553"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-30T17:45:20.689447" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.689447" elapsed="0.018178"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-30T17:45:20.708655" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.707625" elapsed="0.110848"/>
+</kw>
+<status status="PASS" start="2025-07-30T17:45:20.590887" elapsed="0.227586"/>
+</kw>
+<kw name="Resultado esperado">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Name (A to Z)</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.818473" elapsed="0.003752"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-07-30T17:18:10.548182" level="INFO">Diretório atual: 'pwd' nÆo ‚ reconhecido como um comando interno
-ou externo, um programa oper vel ou um arquivo em lotes.</msg>
-<arg>Diretório atual: ${output}</arg>
+<msg time="2025-07-30T17:45:20.822225" level="INFO">Login realizado com sucesso</msg>
+<arg>Login realizado com sucesso</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-07-30T17:18:10.548182" elapsed="0.000000"/>
+<status status="PASS" start="2025-07-30T17:45:20.822225" elapsed="0.000000"/>
 </kw>
-<doc>Verifica se o diretório atual é acessível</doc>
-<status status="PASS" start="2025-07-30T17:18:10.518440" elapsed="0.029742"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-30T17:45:20.829533" level="INFO">Current page contains text 'Name (A to Z)'.</msg>
+<arg>Name (A to Z)</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.822225" elapsed="0.007308"/>
+</kw>
+<status status="PASS" start="2025-07-30T17:45:20.818473" elapsed="0.011060"/>
+</kw>
+<kw name="Sair do site">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-30T17:45:20.829533" elapsed="2.941952"/>
+</kw>
+<status status="PASS" start="2025-07-30T17:45:20.829533" elapsed="2.941952"/>
+</kw>
+<status status="PASS" start="2025-07-30T17:45:13.329125" elapsed="10.442360"/>
 </test>
-<status status="PASS" start="2025-07-30T17:18:10.411419" elapsed="0.137790"/>
+<status status="PASS" start="2025-07-30T17:45:13.099511" elapsed="10.672963"/>
 </suite>
 <statistics>
 <total>
@@ -30,7 +78,7 @@ ou externo, um programa oper vel ou um arquivo em lotes.</msg>
 <tag>
 </tag>
 <suite>
-<stat name="Testes" id="s1" pass="1" fail="0" skip="0">Testes</stat>
+<stat name="Swaglabs" id="s1" pass="1" fail="0" skip="0">Swaglabs</stat>
 </suite>
 </statistics>
 <errors>
