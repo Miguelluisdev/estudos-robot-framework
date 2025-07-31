@@ -6,3 +6,4 @@ Verificar diretório atual
     [Documentation]    Verifica se o diretório atual é acessível
     ${output}=    Run    pwd
     Log    Diretório atual: ${output}
+    Log To Console    Hello , World!

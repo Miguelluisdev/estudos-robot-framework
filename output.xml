@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-07-30T17:45:13.098515" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-07-31T20:46:55.372394" rpa="false" schemaversion="5">
 <suite id="s1" name="Swaglabs" source="C:\Users\migue\OneDrive\Documentos\estudo-cypress\robot-framework\estudos-robot-framework\swaglabs.robot">
 <test id="s1-t1" name="Cenario: 01 Login com sucesso" line="27">
 <kw name="Enrtrar no site">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-30T17:45:13.330180" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-07-31T20:46:56.325069" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${URL_LOGIN}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-30T17:45:13.330180" elapsed="6.978871"/>
+<status status="PASS" start="2025-07-31T20:46:56.324065" elapsed="7.358854"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.309051" elapsed="0.280827"/>
+<status status="PASS" start="2025-07-31T20:47:03.682919" elapsed="0.267644"/>
 </kw>
-<status status="PASS" start="2025-07-30T17:45:13.330180" elapsed="7.260707"/>
+<status status="PASS" start="2025-07-31T20:46:56.324065" elapsed="7.626498"/>
 </kw>
 <kw name="Preencher os campos de texto">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-30T17:45:20.592531" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-07-31T20:47:03.951566" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.591894" elapsed="0.097553"/>
+<status status="PASS" start="2025-07-31T20:47:03.951566" elapsed="0.078799"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-30T17:45:20.689447" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-07-31T20:47:04.030365" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.689447" elapsed="0.018178"/>
+<status status="PASS" start="2025-07-31T20:47:04.030365" elapsed="0.026898"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-30T17:45:20.708655" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-07-31T20:47:04.057263" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.707625" elapsed="0.110848"/>
+<status status="PASS" start="2025-07-31T20:47:04.057263" elapsed="0.123933"/>
 </kw>
-<status status="PASS" start="2025-07-30T17:45:20.590887" elapsed="0.227586"/>
+<status status="PASS" start="2025-07-31T20:47:03.950563" elapsed="0.231644"/>
 </kw>
 <kw name="Resultado esperado">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Name (A to Z)</arg>
 <arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.818473" elapsed="0.003752"/>
+<status status="PASS" start="2025-07-31T20:47:04.182404" elapsed="0.003010"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-07-30T17:45:20.822225" level="INFO">Login realizado com sucesso</msg>
+<msg time="2025-07-31T20:47:04.186413" level="INFO">Login realizado com sucesso</msg>
 <arg>Login realizado com sucesso</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.822225" elapsed="0.000000"/>
+<status status="PASS" start="2025-07-31T20:47:04.185414" elapsed="0.000999"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-07-30T17:45:20.829533" level="INFO">Current page contains text 'Name (A to Z)'.</msg>
+<msg time="2025-07-31T20:47:04.190590" level="INFO">Current page contains text 'Name (A to Z)'.</msg>
 <arg>Name (A to Z)</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.822225" elapsed="0.007308"/>
+<status status="PASS" start="2025-07-31T20:47:04.186413" elapsed="0.004177"/>
 </kw>
-<status status="PASS" start="2025-07-30T17:45:20.818473" elapsed="0.011060"/>
+<status status="PASS" start="2025-07-31T20:47:04.182404" elapsed="0.008186"/>
 </kw>
 <kw name="Sair do site">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-30T17:45:20.829533" elapsed="2.941952"/>
+<status status="PASS" start="2025-07-31T20:47:04.191588" elapsed="2.777048"/>
 </kw>
-<status status="PASS" start="2025-07-30T17:45:20.829533" elapsed="2.941952"/>
+<status status="PASS" start="2025-07-31T20:47:04.191588" elapsed="2.777048"/>
 </kw>
-<status status="PASS" start="2025-07-30T17:45:13.329125" elapsed="10.442360"/>
+<status status="PASS" start="2025-07-31T20:46:56.323289" elapsed="10.646353"/>
 </test>
-<status status="PASS" start="2025-07-30T17:45:13.099511" elapsed="10.672963"/>
+<status status="PASS" start="2025-07-31T20:46:55.373431" elapsed="11.596211"/>
 </suite>
 <statistics>
 <total>
