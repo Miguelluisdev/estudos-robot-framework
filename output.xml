@@ -1,84 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-07-31T20:46:55.372394" rpa="false" schemaversion="5">
-<suite id="s1" name="Swaglabs" source="C:\Users\migue\OneDrive\Documentos\estudo-cypress\robot-framework\estudos-robot-framework\swaglabs.robot">
-<test id="s1-t1" name="Cenario: 01 Login com sucesso" line="27">
-<kw name="Enrtrar no site">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-31T20:46:56.325069" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>${URL_LOGIN}</arg>
-<arg>${BROWSER}</arg>
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-08-01T18:47:40.830392" rpa="false" schemaversion="5">
+<suite id="s1" name="Qazando Site" source="C:\Users\migue\OneDrive\Documentos\estudo-cypress\robot-framework\estudos-robot-framework\qazando_site.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-08-01T18:47:41.064559" level="INFO">Opening browser 'firefox' to base url 'https://automationpratice.com.br/login'.</msg>
+<arg>https://automationpratice.com.br/login</arg>
+<arg>firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-31T20:46:56.324065" elapsed="7.358854"/>
+<status status="PASS" start="2025-08-01T18:47:41.063527" elapsed="6.497483"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-31T20:47:03.682919" elapsed="0.267644"/>
+<test id="s1-t1" name=" Cenario: 01 Login com Suite" line="12">
+<kw name="Abrir Pagina Inicial" owner="qazando_keyword">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@id="login_area"]/div/div/div/div/h3</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-01T18:47:47.562009" elapsed="0.218435"/>
 </kw>
-<status status="PASS" start="2025-07-31T20:46:56.324065" elapsed="7.626498"/>
+<doc>Abre a página inicial do site QAndo</doc>
+<status status="PASS" start="2025-08-01T18:47:47.562009" elapsed="0.218435"/>
 </kw>
-<kw name="Preencher os campos de texto">
+<kw name="Preencher os campos com Credenciais Válidas" owner="qazando_keyword">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-31T20:47:03.951566" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<arg>id=user-name</arg>
-<arg>standard_user</arg>
+<msg time="2025-08-01T18:47:47.780444" level="INFO">Typing text 'qa@gmail.com' into text field 'id=user'.</msg>
+<arg>id=user</arg>
+<arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-31T20:47:03.951566" elapsed="0.078799"/>
+<status status="PASS" start="2025-08-01T18:47:47.780444" elapsed="0.084725"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-31T20:47:04.030365" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-08-01T18:47:47.865169" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>id=password</arg>
-<arg>secret_sauce</arg>
+<arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-31T20:47:04.030365" elapsed="0.026898"/>
+<status status="PASS" start="2025-08-01T18:47:47.865169" elapsed="0.022467"/>
 </kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Preenche os campos de email e senha com credenciais válidas</doc>
+<status status="PASS" start="2025-08-01T18:47:47.780444" elapsed="0.107192"/>
+</kw>
+<kw name="Clicar no Botão de Login" owner="qazando_keyword">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-07-31T20:47:04.057263" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>id=login-button</arg>
+<msg time="2025-08-01T18:47:47.888639" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<arg>id=btnLogin</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-07-31T20:47:04.057263" elapsed="0.123933"/>
+<status status="PASS" start="2025-08-01T18:47:47.888639" elapsed="0.111866"/>
 </kw>
-<status status="PASS" start="2025-07-31T20:47:03.950563" elapsed="0.231644"/>
+<doc>Clica no botão de login</doc>
+<status status="PASS" start="2025-08-01T18:47:47.887636" elapsed="0.112869"/>
 </kw>
-<kw name="Resultado esperado">
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Name (A to Z)</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-07-31T20:47:04.182404" elapsed="0.003010"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-07-31T20:47:04.186413" level="INFO">Login realizado com sucesso</msg>
-<arg>Login realizado com sucesso</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-07-31T20:47:04.185414" elapsed="0.000999"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-07-31T20:47:04.190590" level="INFO">Current page contains text 'Name (A to Z)'.</msg>
-<arg>Name (A to Z)</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-07-31T20:47:04.186413" elapsed="0.004177"/>
-</kw>
-<status status="PASS" start="2025-07-31T20:47:04.182404" elapsed="0.008186"/>
-</kw>
-<kw name="Sair do site">
+<kw name="Sair do navegador" owner="qazando_keyword">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-31T20:47:04.191588" elapsed="2.777048"/>
+<status status="PASS" start="2025-08-01T18:47:48.001503" elapsed="2.940686"/>
 </kw>
-<status status="PASS" start="2025-07-31T20:47:04.191588" elapsed="2.777048"/>
+<doc>Fecha o navegador</doc>
+<status status="PASS" start="2025-08-01T18:47:48.000505" elapsed="2.942683"/>
 </kw>
-<status status="PASS" start="2025-07-31T20:46:56.323289" elapsed="10.646353"/>
+<doc>Teste de login com suite</doc>
+<tag>happy smoke regression</tag>
+<status status="PASS" start="2025-08-01T18:47:47.561010" elapsed="3.382178"/>
 </test>
-<status status="PASS" start="2025-07-31T20:46:55.373431" elapsed="11.596211"/>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-01T18:47:50.944199" elapsed="0.000000"/>
+</kw>
+<doc>QuAndo Site Robot Initialization</doc>
+<status status="PASS" start="2025-08-01T18:47:40.831393" elapsed="10.112806"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">happy smoke regression</stat>
 </tag>
 <suite>
-<stat name="Swaglabs" id="s1" pass="1" fail="0" skip="0">Swaglabs</stat>
+<stat name="Qazando Site" id="s1" pass="1" fail="0" skip="0">Qazando Site</stat>
 </suite>
 </statistics>
 <errors>

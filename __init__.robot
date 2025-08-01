@@ -14,12 +14,12 @@ Executar comandos antes/depois de todos os testes da pasta com Suite Setup e Sui
 
 
 
-*** Settings ***
-Library      SeleniumLibrary
-# Resource     ../resources/keywords.robot
-# Variables    ../resources/variables.robot
-Suite Setup  Open Browser    https://example.com    chrome
-Suite Teardown  Close Browser
+# *** Settings ***
+# Library      SeleniumLibrary
+# # Resource     ../resources/keywords.robot
+# # Variables    ../resources/variables.robot
+# Suite Setup  Open Browser    https://example.com    chrome
+# Suite Teardown  Close Browser
 
 
 # # Evita duplicação de código ✅
